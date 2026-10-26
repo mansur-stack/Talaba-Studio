@@ -82,6 +82,14 @@
       h('p', { text: 'AI yordamida zamonaviy, professional rezyume (CV) shakllantiring va PDF qilib yuklab oling.' }),
       h('span', { class: 'go cv-go' }, 'Rezyume yaratish', icon('external', 16)));
 
+    // Telegram kanallari uchun tugma
+    const tgBtn = (url, title) => h('a', {
+      class: 'btn sm telegram',
+      href: url,
+      target: '_blank',
+      rel: 'noopener noreferrer'
+    }, icon('telegram', 16), title);
+
     /* Tezkor matn vositasi (Lotin-Kirill transliteratsiya va Matn tozalagich) */
     const quickTa = h('textarea', { class: 'textarea', rows: 4, placeholder: 'Matningizni shu yerga qoʻying (Kirill yoki Lotin, buzuq apostroflar bilan)...' });
     const quickCounter = h('span', { class: 'hint', text: '0 soʻz' });
@@ -127,7 +135,11 @@
             h('span', { class: 'chip' }, icon('shield', 14), 'APIʼsiz ishlaydi'),
             h('span', { class: 'chip' }, 'Ma’lumot brauzerda qoladi'),
             h('span', { class: 'chip' }, 'Oflayn rejim (PWA)'),
-            h('span', { class: 'chip' }, 'Hisob va toʻlov yoʻq'))),
+            h('span', { class: 'chip' }, 'Hisob va toʻlov yoʻq')),
+          h('div', { class: 'row', style: { marginTop: '16px', alignItems: 'center' } },
+            h('span', { style: { fontSize: '13px', color: '#c3caea', fontWeight: '700' }, text: 'Telegram kanallar:' }),
+            tgBtn('https://t.me/IT_Club_GFU', 'IT Club GFU'),
+            tgBtn('https://t.me/IT_Impulse_code', 'IT Impulse Code'))),
         h('div', { class: 'hero-art', 'aria-hidden': 'true' },
           h('div', { class: 'sheet a4' }, h('i'), h('i'), h('i'), h('i'), h('i'), h('i'), h('i'), h('i'), h('i')),
           h('div', { class: 'sheet slide' }, h('b'), h('i'), h('i'), h('i')))),
@@ -138,6 +150,16 @@
         card('#/maqola', 'article', 'Maqola', 'Annotatsiya, kalit soʻzlar, asosiy qism va adabiyotlar roʻyxati.'),
         card('#/prezentatsiya', 'slides', 'Prezentatsiya', 'Slaydlar shabloni, 2 ustunli slayd, matndan taqsimlash va PPTX eksport.'),
         cvCard),
+      h('section', { class: 'card telegram-banner' },
+        h('div', { class: 'row', style: { justifyContent: 'space-between', alignItems: 'center', gap: '14px' } },
+          h('div', null,
+            h('div', { class: 'row', style: { gap: '8px', marginBottom: '4px' } },
+              h('span', { class: 'badge tg-badge' }, icon('telegram', 14), 'Telegram Hamjamiyat'),
+              h('strong', { text: 'Rasmiy Telegram kanallarimizga aʼzo boʻling' })),
+            h('p', { class: 'hint', text: 'Eng soʻnggi yangiliklar, IT darslari, yangi shablonlar va talabalar uchun foydali materiallar.' })),
+          h('div', { class: 'row', style: { gap: '10px' } },
+            tgBtn('https://t.me/IT_Club_GFU', 'IT Club GFU'),
+            tgBtn('https://t.me/IT_Impulse_code', 'IT Impulse Code')))),
       quickToolsCard,
       h('div', { class: 'section-title' }, h('h2', { id: 'rec-h', text: 'Oxirgi loyihalar' }), h('a', { class: 'btn sm', href: '#/ishlar' }, 'Barchasi')),
       recentWrap,

@@ -89,6 +89,9 @@ a { color: var(--violet-2); }
 :root[data-theme="dark"] .btn.primary { color: #0b1226; }
 .btn.danger { background: var(--danger); border-color: var(--danger); color: #fff; }
 :root[data-theme="dark"] .btn.danger { color: #1a0a10; }
+.btn.telegram { background: #229ed9; border-color: #229ed9; color: #fff; }
+.btn.telegram:hover { background: #1c8cc3; border-color: #1c8cc3; }
+.btn.telegram svg { color: #fff; }
 .btn.ghost { background: transparent; }
 .btn.sm { min-height: 36px; padding: 6px 12px; font-size: 14px; }
 .btn.icon { padding: 0; width: 40px; min-height: 40px; }
@@ -170,6 +173,10 @@ a { color: var(--violet-2); }
 .cv-card .cv-go { color: var(--ok); }
 .quick-tools { background: var(--surface); border: 1px solid var(--line); }
 .quick-tools textarea { min-height: 90px; }
+.telegram-banner { background: var(--surface); border: 1px solid var(--line); margin-top: 20px; }
+.telegram-banner .btn { white-space: nowrap; }
+.tg-badge { background: rgba(34, 158, 217, .12); color: #229ed9; }
+:root[data-theme="dark"] .tg-badge { background: rgba(34, 158, 217, .22); color: #62c3f5; }
 .section-title { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 30px 0 12px; }
 .section-title h2 { font-size: 20px; letter-spacing: -.01em; }
 .guide { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; counter-reset: g; }
